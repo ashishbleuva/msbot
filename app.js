@@ -13,8 +13,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
   
 // Create chat bot
 var connector = new builder.ChatConnector({
-    "6c26dd45-89bf-4bd6-a5f9-994615b39bcc": process.env.MICROSOFT_APP_ID,
-    "e3F9da1jVKQfr6BnAq9bB4n": process.env.MICROSOFT_APP_PASSWORD
+    appId:'6c26dd45-89bf-4bd6-a5f9-994615b39bcc',
+    appPassword:'e3F9da1jVKQfr6BnAq9bB4n'
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
@@ -23,9 +23,9 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-bot.dialog('/', function (session) {
-    session.send("Hello World");
-});
+//bot.dialog('/', function (session) {
+//    session.send("Hello World");
+//});
 
 
 
@@ -39,9 +39,11 @@ var userResponse = {
     }
 };
 
-bot.dialog('/ha lost', [
+bot.dialog('/', [
     function (session) {
-        builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
+        //builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
+
+        session.send("hello ji");
     },
     function (session, results) {
             var response = userResponse[results.response.entity];
