@@ -1,0 +1,26 @@
+{
+  "name": "msbot",
+  "version": "1.0.0",
+  "description": "Aricent sample bot\",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishbleuva/msbot.git"
+  },
+  "keywords": [
+    "botframework"
+  ],
+  "author": "Ashish Leuva",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/ashishbleuva/msbot/issues"
+  },
+  "homepage": "https://github.com/ashishbleuva/msbot#readme",
+  "dependencies": {
+    "botbuilder": "^0.6.5",
+    "restify": "^4.0.4"
+  }
+}
