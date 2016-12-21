@@ -1,7 +1,7 @@
 {
   "name": "msbot",
   "version": "1.0.0",
-  "description": "Aricent sample bot\",
+  "description": "Aricent sample bot",
   "main": "app.js",
   "scripts": {
     "test": ""
