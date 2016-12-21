@@ -13,8 +13,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
   
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId:'6c26dd45-89bf-4bd6-a5f9-994615b39bcc',
-    appPassword:'e3F9da1jVKQfr6BnAq9bB4n'
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
@@ -23,12 +23,12 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-//bot.dialog('/', function (session) {
-//    session.send("Hello World");
-//});
+bot.dialog('/', function (session) {
+    session.send("Hello World");
+});
 
 
-
+/*
 var userResponse = {
     "Yes": {
         nextStep: "OK, Please check the secondary board."
@@ -51,3 +51,4 @@ bot.dialog('/', [
     }
 
 ]);
+*/
