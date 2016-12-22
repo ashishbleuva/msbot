@@ -1,26 +1,10 @@
 {
-  "name": "msbot",
-  "version": "1.0.0",
-  "description": "Aricent sample bot",
-  "main": "app.js",
-  "scripts": {
-    "test": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ashishbleuva/msbot.git"
-  },
-  "keywords": [
-    "botframework"
-  ],
-  "author": "Ashish Leuva",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/ashishbleuva/msbot/issues"
-  },
-  "homepage": "https://github.com/ashishbleuva/msbot#readme",
-  "dependencies": {
-    "botbuilder",
-    "restify"
-  }
+    "name": "aricent-msbot",
+    "description": "l2 problem resolution",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "restify": "",
+        "botbuilder":""
+    }
 }
