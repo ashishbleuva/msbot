@@ -48,13 +48,10 @@ bot.dialog('/', [
             .attachments([
                new builder.HeroCard(session)
                 .title('Primary Board Check')
-                .subtitle('Primary Board Check')
                 .text('Is primary board workin?')
                 .buttons([
-                    //builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'Yes'),
-                    //builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'No')
-                   builder.CardAction.imBack(session,'Yes','Yes'),
-                    builder.CardAction.imBack(session,'No','No')
+                   builder.CardAction.imBack(session,"Yes","Yes"),
+                    builder.CardAction.imBack(session,"No","No")
                 ])]);
 
         session.send(reply);
