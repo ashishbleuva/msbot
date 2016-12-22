@@ -45,7 +45,7 @@ bot.dialog('/', [
 
        var reply =  new builder.Message(session)
             .attachmentLayout(builder.AttachmentLayout.carousel)
-            .attachments(
+            .attachments([
                new builder.HeroCard(session)
                 .title('Primary Board Check')
                 .subtitle('Primary Board Check')
@@ -53,7 +53,7 @@ bot.dialog('/', [
                 .buttons([
                     builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'Yes'),
                     builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'No')
-                ]));
+                ])]);
 
         session.send(reply);
     },
