@@ -41,9 +41,22 @@ var userResponse = {
 
 bot.dialog('/', [
     function (session) {
-        builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
+        //builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
 
-        //session.send("hello ji");
+       var reply =  new builder.Message(session)
+            .attachments(new builder.HeroCard(session)
+                .title('Primary Board Check')
+                .subtitle('Primary Board Check')
+                .text('Is primary board workin?')
+                .images([
+                    builder.CardImage.create(session, 'https://acom.azurecomcdn.net/80C57D/cdn/mediahandler/docarticles/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/storage-introduction/20160801042915/storage-concepts.png')
+                ])
+                .buttons([
+                    builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'Yes'),
+                    builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'No')
+                ]));
+
+        session.send(reply);
     },
     function (session, results) {
             var response = userResponse[results.response.entity];
