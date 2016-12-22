@@ -44,6 +44,7 @@ bot.dialog('/', [
         //builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
 
        var reply =  new builder.Message(session)
+            .attachmentLayout(builder.AttachmentLayout.carousel)
             .attachments(
                new builder.HeroCard(session)
                 .title('Primary Board Check')
