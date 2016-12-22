@@ -54,7 +54,8 @@ bot.dialog('/', [
                     builder.CardAction.imBack(session,"No","No")
                 ])]);
 
-        session.send(reply);
+        //session.send(reply);
+        session.prompt(reply);
     },
     function (session, results) {
             var response = userResponse[results.response.entity];
