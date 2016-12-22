@@ -41,9 +41,9 @@ var userResponse = {
 
 bot.dialog('/', [
     function (session) {
-        //builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
+        builder.Prompts.choice(session, "Is Primary Board up?", userResponse);
 
-        session.send("hello ji");
+        //session.send("hello ji");
     },
     function (session, results) {
             var response = userResponse[results.response.entity];
